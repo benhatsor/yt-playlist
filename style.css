@@ -10,12 +10,12 @@
 }
 
 .main-screen .main-text {
-  font-size: clamp(16px, 20vw, 50px);
+  font-size: clamp(16px, 20vw, 40px);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 15px 30px;
-  border-radius: 25px;
+  border-radius: 20px;
   color: #5187ed;
   border: 3px solid #5187ed;
   margin: auto;
