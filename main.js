@@ -4,7 +4,7 @@ const input = document.querySelector('.main-text');
 
 input.addEventListener('paste', (e) => {
   
-  input.textContent = event.clipboardData.getData('text');
+  input.textContent = e.clipboardData.getData('text');
   
   openURL();
 
