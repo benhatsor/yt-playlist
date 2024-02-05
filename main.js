@@ -4,9 +4,15 @@ const input = document.querySelector('.main-text');
 
 input.addEventListener('paste', openURL);
 
-input.addEventListener('keyup', ({key}) => {
+input.addEventListener('keyup', (e) => {
   
-  if (key === 'Enter') openURL();
+  if (e.key === 'Enter') {
+    
+    e.preventDefault();
+    
+    openURL();
+    
+  }
     
 });
 
