@@ -6,7 +6,9 @@ input.addEventListener('paste', (e) => {
   
   e.preventDefault();
   
-  input.textContent = e.clipboardData.getData('text');
+  const text = e.clipboardData.getData('text');
+  
+  input.textContent = text;
   
   openURL();
 
@@ -24,6 +26,18 @@ input.addEventListener('keyup', (e) => {
     
 });
 
+input.addEventListener('click', async () => {
+  
+  const text = await readClipboard();
+  
+  if (text.trim() === '') return;
+  
+  input.textContent = text;
+  
+  openURL();
+  
+});
+
 
 function openURL() {
   
@@ -37,5 +51,16 @@ function openURL() {
   
   window.location.href = url;
   
+}
+
+
+
+// read clipboard
+async function readClipboard() {
+  
+  const text = await navigator.clipboard.readText();
+
+  return text;
+
 }
 
