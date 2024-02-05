@@ -2,49 +2,23 @@
 const input = document.querySelector('.main-text');
 
 
-input.addEventListener('paste', (e) => {
-  
-  e.preventDefault();
-  
-  const text = e.clipboardData.getData('text');
-  
-  input.textContent = text;
-  
-  openURL();
-
-});
-
-input.addEventListener('keyup', (e) => {
-  
-  if (e.key === 'Enter') {
-    
-    e.preventDefault();
-    
-    openURL();
-    
-  }
-    
-});
-
 input.addEventListener('click', async () => {
   
-  const text = await readClipboard();
+  let text = await readClipboard();
   
-  if (text.trim() === '') return;
+  text = text.trim();
   
-  input.textContent = text;
-  
-  openURL();
+  if (text === '') return;
+    
+  openURL(text);
   
 });
 
 
-function openURL() {
-  
+function openURL(channelId) {
+    
   let url = 'https://www.youtube.com/playlist?list=';
-  
-  const channelId = input.textContent.trim();
-  
+    
   const playlistId = channelId.slice(0, 1) + 'U' + channelId.slice(2);
   
   url += playlistId;
