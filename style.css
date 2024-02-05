@@ -15,25 +15,11 @@
   align-items: center;
   justify-content: center;
   padding: 15px 30px;
-  border-radius: 20px;
-  color: #5187ed;
-  border: 3px solid #5187ed;
+  border-radius: 22px;
+  color: #fff;
+  background: #5187ed;
   margin: auto;
   box-sizing: border-box;
-  max-width: 100%;
-  overflow-y: auto;
-  white-space: nowrap;
-  outline: none;
-  user-select: text;
-  -webkit-user-select: text;
-}
-
-.main-screen .main-text:empty::before {
-  content: 'Paste channel ID';
-  pointer-events: none;
-  opacity: .5;
-  text-transform: none;
-  white-space: normal; 
 }
 
 
