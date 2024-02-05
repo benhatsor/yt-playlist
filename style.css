@@ -10,7 +10,7 @@
 }
 
 .main-screen .main-text {
-  font-size: clamp(16px, 20vw, 40px);
+  font-size: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
