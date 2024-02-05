@@ -2,7 +2,13 @@
 const input = document.querySelector('.main-text');
 
 
-input.addEventListener('paste', openURL);
+input.addEventListener('paste', (e) => {
+  
+  input.textContent = event.clipboardData.getData('text');
+  
+  openURL();
+
+});
 
 input.addEventListener('keyup', (e) => {
   
