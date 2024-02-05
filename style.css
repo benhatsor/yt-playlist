@@ -30,7 +30,7 @@
 }
 
 .main-screen .main-text:empty::before {
-  content: 'Type channel ID';
+  content: 'Paste channel ID';
   pointer-events: none;
   opacity: .5;
   text-transform: none;
