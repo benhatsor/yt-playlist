@@ -1,2 +1,51 @@
 
-
+.main-screen {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.main-screen .main-text {
+  font-size: clamp(16px, 20vw, 50px);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border-radius: 25px;
+  color: #5187ed;
+  border: 3px solid #5187ed;
+  margin: auto;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-y: auto;
+  white-space: nowrap;
+  outline: none;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.setup-wrapper .secret:empty::before {
+  content: 'Type channel ID';
+  pointer-events: none;
+  opacity: .5;
+  text-transform: none;
+  white-space: normal; 
+}
+
+
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: system-ui;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
