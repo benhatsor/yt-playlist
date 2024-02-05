@@ -28,6 +28,7 @@ function openURL(channelId) {
 }
 
 
+
 // read clipboard
 async function readClipboard() {
   
